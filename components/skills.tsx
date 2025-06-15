@@ -2,15 +2,13 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import { Zoom, Fade } from "react-awesome-reveal";
+import { categorizedSkills } from "@/lib/data";
 
 const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
+  initial: { opacity: 0, y: 100 },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
@@ -27,26 +25,38 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-5xl mx-auto scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
+      <Zoom triggerOnce>
+        <SectionHeading>My Skills</SectionHeading>
+      </Zoom>
+
+      <div className="grid gap-10 mt-10 md:grid-cols-2">
+        {categorizedSkills.map((group, groupIndex) => (
+          <div key={group.category} className="text-left">
+            <Fade cascade damping={0.1} triggerOnce direction="up">
+              <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
+                {group.category}
+              </h3>
+              <ul className="flex flex-wrap gap-3">
+                {group.skills.map((skill, index) => (
+                  <motion.li
+                    key={index}
+                    className="bg-white borderBlack rounded-xl px-4 py-2 text-sm dark:bg-white/10 dark:text-white/80"
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    custom={index}
+                  >
+                    {skill}
+                  </motion.li>
+                ))}
+              </ul>
+            </Fade>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

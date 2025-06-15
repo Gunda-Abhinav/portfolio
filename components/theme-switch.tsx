@@ -9,10 +9,22 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className="fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+      aria-label="Toggle theme"
+      title="Toggle Light/Dark Theme"
       onClick={toggleTheme}
+      className={`
+        fixed bottom-5 right-5 z-50 w-12 h-12 rounded-full 
+        flex items-center justify-center
+        shadow-lg transition-all duration-300 
+        hover:scale-110 active:scale-105
+        ${
+          theme === "light"
+            ? "bg-[#e8eddf] text-[#1e251d] border border-[#bcc4aa]"
+            : "bg-[#1e251d] text-[#e8eddf] border border-[#3d4633]"
+        }
+      `}
     >
-      {theme === "light" ? <BsSun /> : <BsMoon />}
+      {theme === "light" ? <BsSun size={20} /> : <BsMoon size={20} />}
     </button>
   );
 }
