@@ -32,7 +32,7 @@ export default function Certificates() {
   return (
     <section id="certificates" className="mb-28 max-w-5xl mx-auto scroll-mt-28 sm:mb-40">
       <Zoom triggerOnce>
-        <SectionHeading>My Certificates</SectionHeading>
+        <SectionHeading>Certificates</SectionHeading>
       </Zoom>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">

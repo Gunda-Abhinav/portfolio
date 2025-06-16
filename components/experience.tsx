@@ -23,7 +23,7 @@ export default function Experience() {
       // className="scroll-mt-28 mb-28 sm:mb-40"
       className="scroll-mt-28 mb-28 sm:mb-40 px-4 py-10 rounded-2xl shadow-md dark:from-gray-900 dark:to-gray-800 border border-gray-200 dark:border-white/10">
       <Zoom triggerOnce>
-        <SectionHeading>My Experience</SectionHeading>
+        <SectionHeading>Experience</SectionHeading>
       </Zoom>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (

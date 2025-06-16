@@ -28,7 +28,7 @@ export default function Skills() {
       className="mb-28 max-w-5xl mx-auto scroll-mt-28 text-center sm:mb-40"
     >
       <Zoom triggerOnce>
-        <SectionHeading>My Skills</SectionHeading>
+        <SectionHeading>Skills</SectionHeading>
       </Zoom>
 
       <div className="grid gap-10 mt-10 md:grid-cols-2">
