@@ -11,7 +11,7 @@ This is my personal portfolio website built with React and Next.js. It highlight
 - React Hot Toast
 - React Vertical Timeline Component
 
-🚀 Getting Started
+## Getting Started
 To run this project locally,
 1. Clone the repository
 2. Navigate to the project directory:cd react-portfolio
@@ -20,15 +20,15 @@ To run this project locally,
 5. Open http://localhost:3000 in your browser to view the website.
 
 
-🌐 Deployment
+## Deployment
 You can deploy this portfolio easily on Vercel.
 Just connect your GitHub repo, and Vercel handles the rest with automatic builds and previews.
 
-✉️ Contact Form
+## Contact Form
 The contact form is powered by React Email.
 To use it, set up your email service provider and add the necessary environment variables.
 
-📄 License
+## License
 This project is licensed under [MIT License](LICENSE).
 
 ## Acknowledgments
