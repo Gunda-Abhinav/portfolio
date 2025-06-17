@@ -122,7 +122,7 @@ export const experiencesData = [
       "Enabled scalable deployments by containerizing services with Docker and setting up CI/CD pipelines using Azure DevOps, while enhancing observability via Application Insights."
     ],
     icon: React.createElement(BsFillBriefcaseFill),
-    date: "2019 - 2021",
+    date: "2020 - 2021",
   }
 ] as const;
 

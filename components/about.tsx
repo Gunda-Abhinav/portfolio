@@ -27,7 +27,7 @@ export default function About() {
         damping={0.1}
       >
         <p className="text-gray-700 dark:text-white/80 mt-6">
-          Full-Stack Software Engineer with 4+ years of experience building scalable, high-performance
+          Full-Stack Software Engineer with 3+ years of experience building scalable, high-performance
           web and enterprise applications in the Insurance domain. Proficient in C#, .NET, Angular, and 
           React, with expertise in designing RESTful APIs, implementing microservices, and optimizing 
           backend systems for speed and reliability. Skilled in deploying cloud-native solutions on both 
